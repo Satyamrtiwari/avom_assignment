@@ -1,0 +1,85 @@
+{
+  "requirements": [
+    "required qualifications & skills",
+    "required qualifications and skills",
+    "required skills & qualifications",
+    "required skills and qualifications",
+    "qualifications & skills",
+    "qualifications and skills",
+    "required skills",
+    "key requirements",
+    "minimum requirements",
+    "basic qualifications",
+    "must have",
+    "technical requirements",
+    "what you need",
+    "what you'll need",
+    "what you bring",
+    "requirements"
+  ],
+  "preferred": [
+    "preferred skills (nice to have)",
+    "preferred skills",
+    "preferred qualifications",
+    "nice to have",
+    "good to have",
+    "bonus points",
+    "bonus skills",
+    "desired skills"
+  ],
+  "qualifications": [
+    "educational qualifications",
+    "education & experience",
+    "education and experience",
+    "academic background",
+    "education",
+    "qualifications",
+    "eligibility"
+  ],
+  "experience": [
+    "work experience",
+    "professional experience",
+    "employment history",
+    "work history",
+    "relevant experience",
+    "experience"
+  ],
+  "projects": [
+    "academic projects",
+    "key projects",
+    "personal projects",
+    "projects"
+  ],
+  "responsibilities": [
+    "key responsibilities",
+    "responsibilities",
+    "duties",
+    "what you'll do",
+    "what you will do",
+    "role overview",
+    "about the role"
+  ],
+  "tech_stack": [
+    "tools & technologies",
+    "tools and technologies",
+    "technologies",
+    "technical stack",
+    "tech stack",
+    "tools"
+  ],
+  "summary": [
+    "professional summary",
+    "career summary",
+    "profile summary",
+    "executive summary",
+    "summary",
+    "about me"
+  ],
+  "benefits": [
+    "what we offer",
+    "benefits",
+    "perks & benefits",
+    "compensation & benefits",
+    "perks"
+  ]
+}

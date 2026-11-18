@@ -1,0 +1,623 @@
+{
+  "programming_languages": {
+    "python": {
+      "canonical": "Python",
+      "aliases": [
+        "python3",
+        "py",
+        "python 3"
+      ]
+    },
+    "java": {
+      "canonical": "Java",
+      "aliases": [
+        "core java",
+        "java se",
+        "j2se",
+        "j2ee",
+        "java 8",
+        "java 11",
+        "java 17",
+        "java 21"
+      ]
+    },
+    "javascript": {
+      "canonical": "JavaScript",
+      "aliases": [
+        "js",
+        "es6",
+        "es2015",
+        "ecmascript"
+      ]
+    },
+    "typescript": {
+      "canonical": "TypeScript",
+      "aliases": [
+        "ts"
+      ]
+    },
+    "c_sharp": {
+      "canonical": "C#",
+      "aliases": [
+        "csharp",
+        "c# .net",
+        ".net c#"
+      ]
+    },
+    "cpp": {
+      "canonical": "C++",
+      "aliases": [
+        "cplusplus"
+      ]
+    },
+    "c": {
+      "canonical": "C",
+      "aliases": [
+        "c language",
+        "c programming"
+      ]
+    },
+    "go": {
+      "canonical": "Go",
+      "aliases": [
+        "golang"
+      ]
+    },
+    "rust": {
+      "canonical": "Rust",
+      "aliases": [
+        "rust-lang"
+      ]
+    },
+    "ruby": {
+      "canonical": "Ruby",
+      "aliases": [
+        "ruby on rails language"
+      ]
+    },
+    "php": {
+      "canonical": "PHP",
+      "aliases": [
+        "php7",
+        "php8"
+      ]
+    },
+    "swift": {
+      "canonical": "Swift",
+      "aliases": [
+        "swiftui language"
+      ]
+    },
+    "kotlin": {
+      "canonical": "Kotlin",
+      "aliases": [
+        "kt"
+      ]
+    },
+    "scala": {
+      "canonical": "Scala",
+      "aliases": []
+    },
+    "r": {
+      "canonical": "R",
+      "aliases": [
+        "r language",
+        "r programming"
+      ]
+    },
+    "dart": {
+      "canonical": "Dart",
+      "aliases": []
+    },
+    "shell": {
+      "canonical": "Bash / Shell",
+      "aliases": [
+        "bash",
+        "shell scripting",
+        "sh",
+        "zsh",
+        "powershell"
+      ]
+    },
+    "sql": {
+      "canonical": "SQL",
+      "aliases": [
+        "structured query language",
+        "pl/sql",
+        "t-sql"
+      ]
+    }
+  },
+  "frameworks_and_libraries": {
+    "react": {
+      "canonical": "React",
+      "aliases": [
+        "reactjs",
+        "react.js",
+        "react native"
+      ]
+    },
+    "angular": {
+      "canonical": "Angular",
+      "aliases": [
+        "angularjs",
+        "angular 2+"
+      ]
+    },
+    "vue": {
+      "canonical": "Vue.js",
+      "aliases": [
+        "vue",
+        "vuejs"
+      ]
+    },
+    "nextjs": {
+      "canonical": "Next.js",
+      "aliases": [
+        "next",
+        "nextjs"
+      ]
+    },
+    "nodejs": {
+      "canonical": "Node.js",
+      "aliases": [
+        "node",
+        "nodejs"
+      ]
+    },
+    "express": {
+      "canonical": "Express.js",
+      "aliases": [
+        "express",
+        "expressjs"
+      ]
+    },
+    "spring": {
+      "canonical": "Spring",
+      "aliases": [
+        "spring framework"
+      ]
+    },
+    "spring_boot": {
+      "canonical": "Spring Boot",
+      "aliases": [
+        "springboot",
+        "spring-boot"
+      ]
+    },
+    "django": {
+      "canonical": "Django",
+      "aliases": [
+        "django rest framework",
+        "drf"
+      ]
+    },
+    "flask": {
+      "canonical": "Flask",
+      "aliases": []
+    },
+    "fastapi": {
+      "canonical": "FastAPI",
+      "aliases": [
+        "aiohttp",
+        "asyncio web",
+        "fast-api",
+        "starlette"
+      ]
+    },
+    "dotnet": {
+      "canonical": ".NET",
+      "aliases": [
+        ".net core",
+        "dotnet",
+        "asp.net",
+        "asp.net core"
+      ]
+    },
+    "laravel": {
+      "canonical": "Laravel",
+      "aliases": []
+    },
+    "ruby_on_rails": {
+      "canonical": "Ruby on Rails",
+      "aliases": [
+        "rails"
+      ]
+    },
+    "flutter": {
+      "canonical": "Flutter",
+      "aliases": []
+    },
+    "tailwind": {
+      "canonical": "Tailwind CSS",
+      "aliases": [
+        "tailwind",
+        "tailwindcss"
+      ]
+    },
+    "bootstrap": {
+      "canonical": "Bootstrap",
+      "aliases": [
+        "twitter bootstrap"
+      ]
+    },
+    "hibernate": {
+      "canonical": "Hibernate",
+      "aliases": [
+        "jpa/hibernate",
+        "hibernate orm"
+      ]
+    },
+    "redux": {
+      "canonical": "Redux",
+      "aliases": [
+        "redux toolkit",
+        "rtk"
+      ]
+    }
+  },
+  "databases_and_storage": {
+    "postgresql": {
+      "canonical": "PostgreSQL",
+      "aliases": [
+        "postgres",
+        "psql",
+        "pg"
+      ]
+    },
+    "mysql": {
+      "canonical": "MySQL",
+      "aliases": [
+        "my-sql"
+      ]
+    },
+    "sqlite": {
+      "canonical": "SQLite",
+      "aliases": [
+        "sqlite3"
+      ]
+    },
+    "mongodb": {
+      "canonical": "MongoDB",
+      "aliases": [
+        "mongo",
+        "nosql mongo"
+      ]
+    },
+    "redis": {
+      "canonical": "Redis",
+      "aliases": [
+        "redis cache"
+      ]
+    },
+    "elasticsearch": {
+      "canonical": "Elasticsearch",
+      "aliases": [
+        "elastic search",
+        "elk"
+      ]
+    },
+    "cassandra": {
+      "canonical": "Cassandra",
+      "aliases": [
+        "apache cassandra"
+      ]
+    },
+    "dynamodb": {
+      "canonical": "DynamoDB",
+      "aliases": [
+        "aws dynamodb"
+      ]
+    },
+    "oracle": {
+      "canonical": "Oracle DB",
+      "aliases": [
+        "oracle database",
+        "oracle sql"
+      ]
+    },
+    "sql_server": {
+      "canonical": "SQL Server",
+      "aliases": [
+        "ms sql",
+        "mssql",
+        "microsoft sql server"
+      ]
+    },
+    "neo4j": {
+      "canonical": "Neo4j",
+      "aliases": [
+        "graph database"
+      ]
+    }
+  },
+  "cloud_and_devops": {
+    "aws": {
+      "canonical": "AWS",
+      "aliases": [
+        "amazon web services",
+        "ec2",
+        "s3",
+        "lambda",
+        "ecs",
+        "eks"
+      ]
+    },
+    "azure": {
+      "canonical": "Microsoft Azure",
+      "aliases": [
+        "azure",
+        "azure cloud"
+      ]
+    },
+    "gcp": {
+      "canonical": "Google Cloud",
+      "aliases": [
+        "gcp",
+        "google cloud platform"
+      ]
+    },
+    "docker": {
+      "canonical": "Docker",
+      "aliases": [
+        "docker containers",
+        "docker compose"
+      ]
+    },
+    "kubernetes": {
+      "canonical": "Kubernetes",
+      "aliases": [
+        "k8s",
+        "kube"
+      ]
+    },
+    "terraform": {
+      "canonical": "Terraform",
+      "aliases": [
+        "tf",
+        "iac terraform"
+      ]
+    },
+    "ansible": {
+      "canonical": "Ansible",
+      "aliases": []
+    },
+    "ci_cd": {
+      "canonical": "CI/CD",
+      "aliases": [
+        "continuous integration",
+        "continuous deployment",
+        "jenkins",
+        "gitlab ci",
+        "github actions"
+      ]
+    },
+    "linux": {
+      "canonical": "Linux",
+      "aliases": [
+        "unix",
+        "ubuntu",
+        "debian",
+        "centos",
+        "redhat",
+        "rhel"
+      ]
+    },
+    "nginx": {
+      "canonical": "Nginx",
+      "aliases": [
+        "reverse proxy"
+      ]
+    },
+    "kafka": {
+      "canonical": "Apache Kafka",
+      "aliases": [
+        "kafka"
+      ]
+    },
+    "rabbitmq": {
+      "canonical": "RabbitMQ",
+      "aliases": [
+        "message broker"
+      ]
+    }
+  },
+  "ai_ml_data": {
+    "machine_learning": {
+      "canonical": "Machine Learning",
+      "aliases": [
+        "ml",
+        "applied ml"
+      ]
+    },
+    "deep_learning": {
+      "canonical": "Deep Learning",
+      "aliases": [
+        "dl",
+        "neural networks"
+      ]
+    },
+    "nlp": {
+      "canonical": "Natural Language Processing",
+      "aliases": [
+        "nlp",
+        "text processing",
+        "text mining"
+      ]
+    },
+    "computer_vision": {
+      "canonical": "Computer Vision",
+      "aliases": [
+        "cv",
+        "image processing"
+      ]
+    },
+    "pytorch": {
+      "canonical": "PyTorch",
+      "aliases": [
+        "torch"
+      ]
+    },
+    "tensorflow": {
+      "canonical": "TensorFlow",
+      "aliases": [
+        "tf",
+        "keras"
+      ]
+    },
+    "scikit_learn": {
+      "canonical": "Scikit-Learn",
+      "aliases": [
+        "sklearn",
+        "scikit learn"
+      ]
+    },
+    "pandas": {
+      "canonical": "Pandas",
+      "aliases": []
+    },
+    "numpy": {
+      "canonical": "NumPy",
+      "aliases": []
+    },
+    "spacy": {
+      "canonical": "spaCy",
+      "aliases": [
+        "spacy nlp"
+      ]
+    },
+    "sentence_transformers": {
+      "canonical": "Sentence Transformers",
+      "aliases": [
+        "dense embeddings",
+        "dense retrieval",
+        "dense semantic similarity",
+        "hugging face",
+        "hugging face transformers",
+        "sbert",
+        "semantic embeddings",
+        "semantic similarity",
+        "sentence-transformers",
+        "vector embeddings"
+      ]
+    },
+    "huggingface": {
+      "canonical": "Hugging Face",
+      "aliases": [
+        "huggingface",
+        "transformers library"
+      ]
+    },
+    "llm": {
+      "canonical": "Large Language Models",
+      "aliases": [
+        "llm",
+        "llms",
+        "generative ai",
+        "genai"
+      ]
+    },
+    "langchain": {
+      "canonical": "LangChain",
+      "aliases": []
+    },
+    "rag": {
+      "canonical": "RAG",
+      "aliases": [
+        "retrieval augmented generation"
+      ]
+    },
+    "data_analysis": {
+      "canonical": "Data Analysis",
+      "aliases": [
+        "exploratory data analysis",
+        "eda"
+      ]
+    },
+    "spark": {
+      "canonical": "Apache Spark",
+      "aliases": [
+        "spark",
+        "pyspark"
+      ]
+    },
+    "bert": {
+      "canonical": "BERT",
+      "aliases": [
+        "bert-based",
+        "bert"
+      ]
+    }
+  },
+  "software_engineering_and_practices": {
+    "rest_api": {
+      "canonical": "REST APIs",
+      "aliases": [
+        "rest",
+        "restful",
+        "rest api",
+        "web services",
+        "api development"
+      ]
+    },
+    "graphql": {
+      "canonical": "GraphQL",
+      "aliases": []
+    },
+    "microservices": {
+      "canonical": "Microservices",
+      "aliases": [
+        "microservice architecture",
+        "distributed systems"
+      ]
+    },
+    "git": {
+      "canonical": "Git",
+      "aliases": [
+        "github",
+        "gitlab",
+        "version control"
+      ]
+    },
+    "agile": {
+      "canonical": "Agile",
+      "aliases": [
+        "scrum",
+        "kanban",
+        "sprint planning"
+      ]
+    },
+    "unit_testing": {
+      "canonical": "Testing / QA",
+      "aliases": [
+        "unit tests",
+        "pytest",
+        "junit",
+        "tdd",
+        "integration testing"
+      ]
+    },
+    "system_design": {
+      "canonical": "System Design",
+      "aliases": [
+        "software architecture",
+        "scalability",
+        "high availability"
+      ]
+    },
+    "oop": {
+      "canonical": "Object-Oriented Programming",
+      "aliases": [
+        "oop",
+        "oops"
+      ]
+    },
+    "data_structures": {
+      "canonical": "Data Structures & Algorithms",
+      "aliases": [
+        "dsa",
+        "algorithms"
+      ]
+    }
+  }
+}

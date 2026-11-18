@@ -1,0 +1,25 @@
+services:
+  # FastAPI Backend Service
+  - type: web
+    name: resumeranker-api
+    runtime: python
+    buildCommand: "cd backend && pip install -r requirements.txt && python -m spacy download en_core_web_sm"
+    startCommand: "cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: CORS_ORIGINS
+        value: "*"
+
+  # Vite React Frontend
+  - type: web
+    name: resumeranker-web
+    runtime: static
+    buildCommand: "cd frontend && npm install && npm run build"
+    staticPublishPath: "./frontend/dist"
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: resumeranker-api
+          property: host
