@@ -11,21 +11,3 @@ services:
         value: 3.11.9
       - key: CORS_ORIGINS
         value: "*"
-
-  # Vite React Frontend
-  - type: web
-    name: resumeranker-web
-    runtime: static
-    plan: free
-    buildCommand: "cd frontend && npm install && npm run build"
-    staticPublishPath: "./frontend/dist"
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-    envVars:
-      - key: VITE_API_BASE_URL
-        fromService:
-          type: web
-          name: resumeranker-api
-          property: host
