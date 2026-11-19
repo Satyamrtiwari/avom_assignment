@@ -1,6 +1,11 @@
 import os
 import sys
 
+# Constrain thread pools to save virtual memory in low-RAM environments (Render 512MB)
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
+os.environ.setdefault("PYTHONUNBUFFERED", "1")
+
 # Ensure backend root is in sys.path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 

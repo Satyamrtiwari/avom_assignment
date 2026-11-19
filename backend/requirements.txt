@@ -14,9 +14,9 @@ PyMuPDF>=1.23.7
 python-docx>=1.1.0
 pdfplumber>=0.11.0
 
-# NLP & ML
+# NLP & ML (Optimized for cloud runtimes <512MB)
 spacy>=3.7.2
-sentence-transformers>=2.2.2
+fastembed>=0.3.0
 numpy>=1.26.0
 
 # Utilities & Testing

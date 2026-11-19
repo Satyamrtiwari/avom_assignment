@@ -38,8 +38,11 @@ async def lifespan(app: FastAPI):
 
     async def _async_warmup():
         try:
-            logger.info(f"Loading spaCy model '{settings.SPACY_MODEL}'...")
-            nlp = spacy.load(settings.SPACY_MODEL)
+            logger.info(f"Loading spaCy model '{settings.SPACY_MODEL}' with minimal pipes...")
+            nlp = spacy.load(
+                settings.SPACY_MODEL,
+                disable=["parser", "tagger", "lemmatizer", "attribute_ruler"],
+            )
 
             taxonomy_path = os.path.join(settings.DATA_DIR, "skills.json")
             logger.info(f"Loading skill taxonomy from {taxonomy_path}...")
@@ -74,6 +77,8 @@ async def lifespan(app: FastAPI):
             app.state.scorer = scorer
             app.state.match_service = match_service
             app.state.nlp_ready = True
+            import gc
+            gc.collect()
             logger.info("All NLP components, models, and matching engine loaded and ready.")
         except Exception as e:
             logger.error(f"Error during NLP background warmup: {e}", exc_info=True)

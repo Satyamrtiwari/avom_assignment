@@ -30,7 +30,10 @@ def _get_shared_nlp_components():
     global _lazy_nlp, _lazy_skill_matcher
     if _lazy_nlp is None:
         import spacy
-        _lazy_nlp = spacy.load(settings.SPACY_MODEL)
+        _lazy_nlp = spacy.load(
+            settings.SPACY_MODEL,
+            disable=["parser", "tagger", "lemmatizer", "attribute_ruler"],
+        )
     if _lazy_skill_matcher is None:
         from app.nlp.skill_taxonomy import SkillMatcher
         taxonomy_path = os.path.join(settings.DATA_DIR, "skills.json")
