@@ -28,49 +28,60 @@ logger = logging.getLogger("resumeranker")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Lifecycle event handler: initializes DB tables and NLP components on startup."""
+    """Lifecycle event handler: initializes DB tables, binds port immediately, warms up models in background."""
     logger.info("Initializing database tables...")
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     logger.info("Database initialized successfully.")
 
-    logger.info(f"Loading spaCy model '{settings.SPACY_MODEL}'...")
-    nlp = spacy.load(settings.SPACY_MODEL)
+    app.state.nlp_ready = False
 
-    taxonomy_path = os.path.join(settings.DATA_DIR, "skills.json")
-    logger.info(f"Loading skill taxonomy from {taxonomy_path}...")
-    skill_matcher = SkillMatcher(nlp, taxonomy_path)
+    async def _async_warmup():
+        try:
+            logger.info(f"Loading spaCy model '{settings.SPACY_MODEL}'...")
+            nlp = spacy.load(settings.SPACY_MODEL)
 
-    logger.info("Initializing Resume and JD Extractors...")
-    resume_extractor = ResumeExtractor(nlp, skill_matcher)
-    jd_extractor = JDExtractor(nlp, skill_matcher)
+            taxonomy_path = os.path.join(settings.DATA_DIR, "skills.json")
+            logger.info(f"Loading skill taxonomy from {taxonomy_path}...")
+            skill_matcher = SkillMatcher(nlp, taxonomy_path)
 
-    logger.info(f"Loading SentenceTransformer model '{settings.SBERT_MODEL}'...")
-    embedder = Embedder.get_instance(settings.SBERT_MODEL)
+            logger.info("Initializing Resume and JD Extractors...")
+            resume_extractor = ResumeExtractor(nlp, skill_matcher)
+            jd_extractor = JDExtractor(nlp, skill_matcher)
 
-    logger.info("Initializing ResumeScorer and MatchService...")
-    scorer = ResumeScorer(
-        embedder=embedder,
-        weights={
-            "skill": settings.WEIGHT_SKILL,
-            "semantic": settings.WEIGHT_SEMANTIC,
-            "experience": settings.WEIGHT_EXPERIENCE,
-            "qualification": settings.WEIGHT_QUALIFICATION,
-        },
-        skill_matcher=skill_matcher,
-    )
-    match_service = MatchService()
+            logger.info(f"Loading SentenceTransformer model '{settings.SBERT_MODEL}'...")
+            embedder = Embedder.get_instance(settings.SBERT_MODEL)
 
-    # Store singletons in app state
-    app.state.nlp = nlp
-    app.state.skill_matcher = skill_matcher
-    app.state.resume_extractor = resume_extractor
-    app.state.jd_extractor = jd_extractor
-    app.state.embedder = embedder
-    app.state.scorer = scorer
-    app.state.match_service = match_service
+            logger.info("Initializing ResumeScorer and MatchService...")
+            scorer = ResumeScorer(
+                embedder=embedder,
+                weights={
+                    "skill": settings.WEIGHT_SKILL,
+                    "semantic": settings.WEIGHT_SEMANTIC,
+                    "experience": settings.WEIGHT_EXPERIENCE,
+                    "qualification": settings.WEIGHT_QUALIFICATION,
+                },
+                skill_matcher=skill_matcher,
+            )
+            match_service = MatchService()
 
-    logger.info("All NLP components, models, and matching engine loaded. ResumeRanker API listening.")
+            # Store singletons in app state
+            app.state.nlp = nlp
+            app.state.skill_matcher = skill_matcher
+            app.state.resume_extractor = resume_extractor
+            app.state.jd_extractor = jd_extractor
+            app.state.embedder = embedder
+            app.state.scorer = scorer
+            app.state.match_service = match_service
+            app.state.nlp_ready = True
+            logger.info("All NLP components, models, and matching engine loaded and ready.")
+        except Exception as e:
+            logger.error(f"Error during NLP background warmup: {e}", exc_info=True)
+
+    import asyncio
+    asyncio.create_task(_async_warmup())
+
+    logger.info("ResumeRanker API listening on port.")
     yield
     logger.info("Shutting down ResumeRanker API...")
     await engine.dispose()
