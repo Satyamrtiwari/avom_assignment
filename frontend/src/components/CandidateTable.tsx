@@ -86,7 +86,7 @@ export const CandidateTable: React.FC<CandidateTableProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-500">
-              Ranked by multi-signal model: Skill Match, SBERT Semantics, Experience, Degree.
+              Ranked by multi-signal model: Skill Match, Semantic Matching, Experience, Degree.
             </p>
           </div>
         </div>
@@ -153,7 +153,7 @@ export const CandidateTable: React.FC<CandidateTableProps> = ({
             AI Multi-Signal Matching in Progress...
           </h3>
           <p className="text-xs text-slate-500 max-w-md mx-auto mb-5">
-            Evaluating {stagedCount || 'staged'} candidate resumes against <strong className="text-indigo-900 font-bold">"{jdTitle || 'Job Description'}"</strong>. Computing SBERT vectors and cross-referencing experience tenures...
+            Evaluating {stagedCount || 'staged'} candidate resumes against <strong className="text-indigo-900 font-bold">"{jdTitle || 'Job Description'}"</strong>. Computing dense semantic vectors and cross-referencing experience tenures...
           </p>
 
           {/* 4 Pipeline Stages */}
@@ -169,7 +169,7 @@ export const CandidateTable: React.FC<CandidateTableProps> = ({
             <div className="bg-white p-3 rounded-xl border border-indigo-100 shadow-2xs">
               <div className="flex items-center space-x-1.5 text-xs font-bold text-indigo-700 mb-0.5">
                 <Loader2 className="w-3.5 h-3.5 text-indigo-600 animate-spin shrink-0" />
-                <span>2. SBERT Semantic</span>
+                <span>2. Semantic Matching</span>
               </div>
               <p className="text-[10px] text-slate-400">384-d semantic embedding</p>
             </div>

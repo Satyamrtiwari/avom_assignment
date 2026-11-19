@@ -54,7 +54,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
               </div>
               <div className="bg-white p-2 rounded-lg border border-indigo-100">
                 <span className="block font-extrabold text-indigo-700 text-base">30%</span>
-                <span className="font-semibold text-slate-700">SBERT Semantic</span>
+                <span className="font-semibold text-slate-700">Semantic Matching</span>
               </div>
               <div className="bg-white p-2 rounded-lg border border-indigo-100">
                 <span className="block font-extrabold text-indigo-700 text-base">20%</span>
@@ -87,7 +87,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
 
           <div>
             <h4 className="font-bold text-slate-900 text-sm mb-1">
-              4. Calibrated SBERT Semantic Floor &amp; Ceiling
+              4. Calibrated Semantic Matching Floor &amp; Ceiling
             </h4>
             <p>
               Cosine similarity is mapped smoothly across a calibrated floor (0.50) and ceiling (0.80), ensuring off-domain candidates receive zero unwarranted credit while domain experts receive full semantic credit.
