@@ -1,7 +1,13 @@
 # 🚀 ResumeRanker — AI-Based Resume Matching & Candidate Ranking System
 
-> **Candidate Assignment**: AI / Full Stack Developer Intern  
-> **Technologies**: Python 3.11, FastAPI, sentence-transformers (`all-MiniLM-L6-v2`), spaCy (`en_core_web_sm`), PyMuPDF, python-docx, SQLite / PostgreSQL.
+> **Candidate Assignment**: AI / Full Stack Developer Intern / Project-Based  
+> **Candidate Name**: Satyam Tiwari  
+> **Live Web App**: [https://avom-assignment.vercel.app/](https://avom-assignment.vercel.app/)  
+> **Live API (Render)**: [https://resumeranker-api-1a9d.onrender.com](https://resumeranker-api-1a9d.onrender.com)  
+> **Interactive Swagger API Docs**: [https://resumeranker-api-1a9d.onrender.com/docs](https://resumeranker-api-1a9d.onrender.com/docs)  
+> **GitHub Repository**: [https://github.com/Satyamrtiwari/avom_assignment](https://github.com/Satyamrtiwari/avom_assignment)  
+> **Demo Video**: [ResumeRanker_Live_Demo_Satyam_Tiwari_Under4Min.mp4](videos/ResumeRanker_Live_Demo_Satyam_Tiwari_Under4Min.mp4)  
+> **Technologies**: Next.js 14, React, Tailwind CSS, Python 3.11, FastAPI, FastEmbed / Sentence Transformers (`all-MiniLM-L6-v2`), spaCy (`en_core_web_sm`), PyMuPDF, python-docx, SQLite / PostgreSQL.
 
 ---
 
@@ -23,8 +29,9 @@ ResumeRanker is an AI-powered recruitment engine that compares candidate resumes
 
 | Component | Choice | Rationale |
 |---|---|---|
-| **API Framework** | **FastAPI** | High-performance async endpoints, automatic Pydantic validation, interactive OpenAPI/Swagger documentation at `/docs`. |
-| **NLP Embeddings** | **Sentence Transformers (`all-MiniLM-L6-v2`)** | 80 MB model size, fast CPU latency (~14 ms/sentence), 384-dimensional dense vectors. Runs fully offline without external API keys or costs. |
+| **Frontend UI** | **Next.js 14, React, Tailwind CSS** | Fast modern UI, reactive state management, drag-and-drop batch upload, real-time analytics dashboard, and deep-dive inspection drawer. Deployed on Vercel. |
+| **API Framework** | **FastAPI** | High-performance async endpoints, automatic Pydantic validation, interactive OpenAPI/Swagger documentation at `/docs`. Deployed on Render. |
+| **NLP Embeddings** | **Sentence Transformers (`all-MiniLM-L6-v2`) via FastEmbed (ONNX)** | Ultra-fast ONNX runtime, zero memory spikes (< 220 MB RAM), 384-dimensional dense vectors. Runs fully offline without external API keys or costs. |
 | **Skill Extraction & NER** | **spaCy (`en_core_web_sm`)** | Fast entity recognition for candidate names, paired with a custom `PhraseMatcher` indexed against a 500+ tech skill taxonomy (`skills.json`) with synonym mapping (e.g. `k8s` $\to$ `Kubernetes`). |
 | **Document Parsing** | **PyMuPDF + python-docx** | Fast extraction from native PDFs and Word documents, including table cell parsing (crucial for tabular resumes) and scanned PDF quality detection. Fallback to `pdfplumber`. |
 | **Database** | **SQLite (aiosqlite) / PostgreSQL (asyncpg)** | Zero-configuration SQLite for instant local development; SQLAlchemy 2.0 ORM abstracts dialect for seamless PostgreSQL deployment. Embeddings cached in JSON columns. |
